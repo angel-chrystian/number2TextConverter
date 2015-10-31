@@ -1,0 +1,38 @@
+{
+    "name":"Number to Text Converter",
+    "version":"1.0.0.000",
+    "author":"Angel Chrystian Torres <angel.torres@torugaconsulting.com>",
+    "slug":"number2TextConverter",
+    "packageDirectory":"number2TextConverter",
+    "type":"convertion",
+    "keywords":"number conversion,i18n",
+    "homepage":"http://elangelito.mx/librerias/number-2-text-converter",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/angel-chrystian/number2TextConverter"
+    },
+    "shortDescription":"Library to convert numbers to text",
+    "engines":[
+        {
+            "type":"railo",
+            "version":">4.1"
+        },
+        {
+            "type":"adobe",
+            "version":">10"
+        },
+        {
+            "type":"lucee",
+            "version":">4.5"
+        }
+    ],
+    "license":[
+        {
+            "type":"MIT",
+            "url":"https://opensource.org/licenses/MIT"
+        }
+    ],
+    "ignore":[
+        
+    ]
+}
