@@ -26,7 +26,9 @@ Just drop into accesible folder in your server
 ## How to use
 
 1. Create an instance of the object
-        c = new numberToTextConverter(); 
+```
+c = new numberToTextConverter();
+```
 2. Call the convert function with the number you want to convert
 ```
 result = c.convert( 1999 ); //mil novecientos noventa y nueve

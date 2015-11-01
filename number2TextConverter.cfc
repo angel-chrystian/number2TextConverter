@@ -11,7 +11,7 @@
  *
  * How to use:
  * 1. Create the object, no parameters will convert in spanish if you want it in english pass the first parameter as 'english'
- *   c = new numberToTextConverter();
+ *   c = new number2TextConverter();
  *
  * 2. Call the convert function
  *   result = c.convert( 1999 ); //mil novecientos noventa y nueve
