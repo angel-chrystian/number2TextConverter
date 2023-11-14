@@ -79,7 +79,7 @@ component displayname="Number to Text Converter" accessors=true {
 
     	//Append currency if required
         if( arguments.appendCurrency ){
-        	result = result & ' '  & variables.currency;
+        	result = uCase( trim( result ) & ' '  & variables.currency );
         }
         try{
         	return trim( result );
