@@ -16,6 +16,7 @@
  * 2. Call the convert function
  *   result = c.convert( 1999 ); //mil novecientos noventa y nueve
  *   result = c.convert( 1999.50, true ); //mil novecientos novena y nueve 50/100 MX
+ *   result = c.convert( 1999.50, true, true ); //(Returns UPPERCASE) MIL NOVECIENTOS NOVENA Y NUEVE 50/100 MX
  *
  * 3. Language can be changed after object is created
  *   c.setLanguage('english');
@@ -50,7 +51,7 @@ component displayname="Number to Text Converter" accessors=true {
  * Converts the number to a string
  * ======================================================================================================
  **/
-    public string function convert( required numeric value, boolean appendCurrency = false ){
+    public string function convert( required numeric value, boolean appendCurrency = false, boolean toUpper = false ){
     	//Final result variable
     	var result = '';
     	var integer = '';
@@ -79,10 +80,18 @@ component displayname="Number to Text Converter" accessors=true {
 
     	//Append currency if required
         if( arguments.appendCurrency ){
-        	result = uCase( trim( result ) & ' '  & variables.currency );
+			if( toUpper ){
+				result = uCase( trim( result ) & ' '  & variables.currency );
+			}else{
+				result = trim( result ) & ' '  & variables.currency;
+			}
         }
         try{
-        	return trim( result );
+			if( toUpper ){
+				return uCase( trim( result ) );
+			}else{
+				return trim( result );
+			}
         }
         catch( any e ){
         	return( arguments.value );
